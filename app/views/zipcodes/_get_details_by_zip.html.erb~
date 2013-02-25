@@ -1,0 +1,51 @@
+<h3>Weather Report</h3>
+<hr/>
+<div class="row">
+  <div class="span1"></div>
+  <div class="span3">
+    <h5 class="text-info">Present Condition:</h5>
+    <hr/>
+    <b>Temp C :</b>
+    <%= @current_report["temp_C"] %>&deg;</br>
+    <b>Temp F :</b>
+    <%= @current_report["temp_F"] %>&deg;</br>
+    <b>Cloud Cover:</b>
+    <%= @current_report["cloudcover"] %></br>
+    <b>Humidity:</b>
+    <%= @current_report["humidity"] %></br> 
+    <b>Observation Time:</b>
+    <%=@current_report["observation_time"] %></br> 
+    <b>Pressure:</b> 
+    <%= @current_report["pressure"] %></br>
+    <hr/>
+    <h5 class="text-info">Today</h5>
+    <b>Date:</b>
+    <%= @day1_report["date"]%> </br>
+    <b>Max Temperature:</b>
+    <%= @day1_report["tempMaxC"] %>&deg;C</br>
+    <b>Minimum Temperature:</b>
+    <%= @day1_report["tempMinC"] %>&deg;C</br>
+  </div>
+  <div class="span4">
+    </br></br>
+    </br>
+    <h5 class="text-info">Tomorrow</h5>
+    <b>Date:</b>
+    <%= @day2_report["date"]%> </br>
+    <b>Max Temperature:</b>
+    <%= @day2_report["tempMaxC"]%>&deg;C</br>
+    <b>Minimum Temperature:</b>
+    <%= @day2_report["tempMinC"] %>&deg;C</br></br></br>
+    <hr/>
+    <h5 class="text-info">Day After Tomorrow</h5>
+    <b>Date:</b>
+    <%= @day3_report["date"]%> </br>
+    <b>Max Temperature:</b>
+    <%= @day3_report["tempMaxC"]%>&deg;C</br>
+    <b>Minimum Temperature:</b>
+    <%= @day3_report["tempMinC"] %>&deg;C</br>
+  </div>
+</div>
+
+<%= @a %>
+

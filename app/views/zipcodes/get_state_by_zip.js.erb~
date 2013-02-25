@@ -1,0 +1,1 @@
+$("#state_results").html("<%= escape_javascript(render("get_details_by_zip")) %>");

@@ -1,0 +1,36 @@
+<h3 class="text-success">Weather Report</h3>
+<hr/>
+<div class="row-fluid"">
+  <div class="span1"></div>
+  <div class="span5">
+    <h4>Please Enter Your ZipCode:</h4>
+    <!-- Ajax Call to index page--->
+    <%= form_tag get_details_by_zip_zipcodes_path, :id=>"weather", :remote => true do  %>
+      <%= text_field_tag "code", "", :id=>"zip1"%></br>
+      <%= submit_tag "search", :class=>"btn btn-success", :id=>"weather-report" %>
+    <% end %>
+  </div>
+  <div class="span4">
+  <!-- Ajax Call to index page --->
+    <%= form_tag get_state_by_zip_zipcodes_path, :id=>"ZipInfo", :remote => true do  %>
+      <%= hidden_field_tag "code", "", :id=>"zip2"%></br>
+      <% submit_tag "search", :class=>"btn btn-success" %>
+    <% end %>
+    
+  </div>
+ </div>
+<hr/>
+<div class="row-fluid">
+<div id="zipresults" class="span8"></div>
+<div id="state_results" class="span4"></div>
+</div>
+
+<script>
+  // this script for submitting second "ZipInfo" form 
+  // with the value of "Weather" form text_field_tag value
+  $('#weather-report').click(function() {
+   var val = $('#zip1').val();
+   $("#zip2").val(val);
+  $('#ZipInfo').submit();
+});
+</script>

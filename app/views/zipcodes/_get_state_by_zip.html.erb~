@@ -1,0 +1,10 @@
+<h3>Information about zipcode</h3>
+<hr/>
+<b>State:</b>
+<%= @state %></br>
+<b>City:</b>
+<%= @city %></br>
+<b>Area Code:</b>
+<%= @area_code %></br>
+<b>Time Zone :</b>
+<%= @time_zone %>

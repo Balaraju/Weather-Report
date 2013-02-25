@@ -1,0 +1,16 @@
+<% for i in 0..5 %>
+Cloud Cover:</br>
+<%= @cloudcover %></br>
+Humidity:</br>
+<%= @humidity %></br> 
+Observation Time</br>
+<%=@observation_time %> 
+Pressure: </br>
+<%= @pressure %></br>
+Temp C</br>
+<%=  @tempC %></br>
+Temp F</br>
+<%= @tempF %></br>
+<%= @a %>
+<% %>
+
